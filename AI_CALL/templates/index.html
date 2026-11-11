@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AI Call Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <main class="card">
+      <h1>AI Sales Call</h1>
+
+      <div class="field">
+        <label for="phone">Phone number</label>
+        <input id="phone" placeholder="+1234567890" />
+      </div>
+
+      <div class="actions">
+        <button id="callBtn" class="primary">Call</button>
+        <div id="status" class="status">Idle</div>
+      </div>
+
+      <div class="connecting" id="connecting" aria-hidden="true">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="label">Connecting…</div>
+      </div>
+
+      <p class="hint">Make sure your `.env` has Twilio keys and `VOICE_WEBHOOK_URL` set.</p>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
